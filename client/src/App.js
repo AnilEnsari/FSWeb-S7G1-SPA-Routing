@@ -37,19 +37,18 @@ export default function App() {
       <div>
         <KaydedilenlerListesi
           list={[
-            ...saved,
+            saved,
             /* Burası esnek */
           ]}
         />
         <Switch>
-          <Route path="/">
+          <Route path="/" exact>
             <FilmListesi movies={movieList} />
           </Route>
           <Route path="/filmler/:id">
             <Film id={movieList.id} />
           </Route>
         </Switch>
-        <div>Bu Div'i kendi Routelarınızla değiştirin</div>
       </div>
     </Router>
   );
