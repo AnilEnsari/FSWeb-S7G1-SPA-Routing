@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FilmListesi from "./Filmler/FilmListesi";
 import KaydedilenlerListesi from "./Filmler/KaydedilenlerListesi";
 import Film from "./Filmler/Film";
@@ -46,7 +46,10 @@ export default function App() {
             <FilmListesi movies={movieList} />
           </Route>
           <Route path="/filmler/:id">
-            <Film id={movieList.id} />
+            <Film
+              id={movieList.id}
+              KaydedilenlerListesineEkle={KaydedilenlerListesineEkle}
+            />
           </Route>
         </Switch>
       </div>

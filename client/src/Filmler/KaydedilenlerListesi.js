@@ -5,8 +5,10 @@ export default function KaydedilenlerListesi(props) {
   return (
     <div className="saved-list">
       <h3>Kaydedilen Filmler:</h3>
-      {props.list.map((movie) => (
-        <span className="saved-movie">{movie.title}</span>
+      {props.list.map((movie, index) => (
+        <span className="saved-movie" key={index}>
+          {movie.title}
+        </span>
       ))}
       <Link className="home-button" to={"/"}>
         Anasayfa
