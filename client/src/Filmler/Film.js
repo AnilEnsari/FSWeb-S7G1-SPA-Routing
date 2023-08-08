@@ -54,7 +54,7 @@ export default function Film(props) {
       <div
         className="save-button"
         onClick={() => {
-          props.KaydedilenlerListesineEkle(movie.id);
+          props.KaydedilenlerListesineEkle(id);
         }}
       >
         Kaydet
